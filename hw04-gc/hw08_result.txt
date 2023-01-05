@@ -1,0 +1,39 @@
+Результаты до оптимизации:
+Xmx256m - OutOfMemoryError
+Xmx384m - spend msec:20238, sec:20
+Xmx512m - spend msec:18253, sec:18
+Xmx640m - spend msec:16724, sec:16
+Xmx768m - spend msec:17451, sec:17
+Xmx896m - spend msec:16113, sec:16
+Xmx1024m - spend msec:15931, sec:15
+Xmx1152m - spend msec:15818, sec:15
+Xmx1280m - spend msec:15806, sec:15
+Xmx1408m - spend msec:15572, sec:15
+Xmx1536m - spend msec:15404, sec:15
+Xmx1664m - spend msec:15873, sec:15
+Xmx1792m - spend msec:15243, sec:15
+Xmx1920m - spend msec:15387, sec:15
+Xmx2048m - spend msec:14880, sec:14
+
+Результаты после оптимизации:
+Xmx200m - OutOfMemoryError
+Xmx210m - spend msec:3881, sec:3
+Xmx220m - spend msec:3941, sec:3
+Xmx230m - spend msec:3692, sec:3
+Xmx240m - spend msec:3723, sec:3
+Xmx250m - spend msec:3569, sec:3
+Xmx256m - spend msec:3239, sec:3
+Xmx384m - spend msec:3247, sec:3
+Xmx512m - spend msec:2783, sec:2
+Xmx640m - spend msec:2848, sec:2
+Xmx768m - spend msec:2683, sec:2
+Xmx896m - spend msec:2702, sec:2
+Xmx1024m - spend msec:2456, sec:2
+Xmx1536m - spend msec:2627, sec:2
+
+Заменил все типы Integer на примитивы int.
+После оптимизаци кода время выполнения программы сократилось на порядок.
+Для работы программы
+ - ДО оптимизации достаточно 896 МБ.
+ - ПОСЛЕ оптимизации достаточно 512 МБ.
+При увеличении выделенной ОЗУ в обоих случаях сокращение времени выполнения программы изменяется несущественно.
