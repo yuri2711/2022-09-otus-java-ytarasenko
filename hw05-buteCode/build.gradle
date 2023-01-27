@@ -1,0 +1,17 @@
+plugins {
+    id 'java'
+    id 'com.github.johnrengelman.shadow'
+}
+
+sourceCompatibility = JavaVersion.VERSION_17
+targetCompatibility = JavaVersion.VERSION_17
+
+task shadowDemo(type: Jar, dependsOn: shadowJar) {
+    archiveBaseName.set('byteCodes')
+    manifest {
+        attributes 'Main-Class': 'ru.asamara56.Demo'
+    }
+    from zipTree(shadowJar.archiveFile)
+}
+
+tasks.build.dependsOn tasks.shadowDemo
