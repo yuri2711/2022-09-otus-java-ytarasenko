@@ -1,4 +1,4 @@
-package ru.otus.homework;
+package ru.otus.handler.homework;
 
 
 import java.util.Deque;
