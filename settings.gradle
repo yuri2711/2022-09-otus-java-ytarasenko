@@ -4,5 +4,5 @@ include 'hw02-generics'
 include 'hw03-reflection'
 include 'hw04-gc'
 include 'hw05-buteCode'
+include 'hw-06-solid'
 include 'hw-07-structuralPatterns'
-
