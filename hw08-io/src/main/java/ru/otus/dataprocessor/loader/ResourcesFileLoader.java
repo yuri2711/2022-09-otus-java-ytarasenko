@@ -12,10 +12,10 @@ import java.util.Scanner;
 
 public class ResourcesFileLoader implements Loader {
 
-    private final File file;
+    private File file;
 
-    public ResourcesFileLoader(String fileName) {
-        this.file = new File(fileName);
+    public ResourcesFileLoader(String file) {
+        setFile(file);
     }
 
     @Override
@@ -29,5 +29,9 @@ public class ResourcesFileLoader implements Loader {
         } catch (Exception ex) {
             throw new FileProcessException(ex.getMessage());
         }
+    }
+
+    private void setFile(String fileName) {
+        file = new File(fileName);
     }
 }
