@@ -6,6 +6,7 @@ include 'hw04-gc'
 include 'hw05-buteCode'
 include 'hw-06-solid'
 include 'hw-07-structuralPatterns'
+include 'hw08-io'
+include 'hw-09-JDBC'
 include 'hw10-JPQL'
 include 'hw11-cache'
-
