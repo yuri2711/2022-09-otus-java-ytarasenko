@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>OTUS</title>
+</head>
+
+<body>
+<div class="top">
+    <img src="img/logo.svg" style="width: 300px; height: 300px">
+    <br/>
+    <h3>Добро пожаловать на страницу примера</h3>
+</div>
+<h3>Данные о системе:</h3>
+<span th:text="${osData}"></span>
+
+<h3>Создать нового клиента</h3>
+<form id="newClientForm" style="width: 300px;">
+    <p>
+        <label>Имя клиента</label>
+        <input type="text" id="name" value="клиент_" placeholder="Имя клиента" required autofocus>
+    </p>
+    <p>
+        <label>Адрес</label>
+        <input type="text" id="address" value="address_" placeholder="Введите адрес">
+    </p>
+    <p>
+        <label>Телефон моб.</label>
+        <input type="text" id="phone_mob" value="9xxxxxxxxx" placeholder="Введите номер телефона">
+    </p>
+    <p>
+        <label>Телефон дом.</label>
+        <input type="text" id="phone_home" value="495xxxxxxx" placeholder="Введите номер телефона">
+    </p>
+</form>
+<button onclick="createClient()">Создать</button>
+
+<h3>Список клиентов</h3>
+<table class="clients">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Address</th>
+            <th>Phones</th>
+        </tr>
+    </thead>
+    <tbody id="tBody">
+            <tr th:each="client : ${clients}">
+                <td th:text="${client.id}">1</td>
+                <td th:text="${client.name}"></td>
+                <td th:text="${client.address.street}"></td>
+                <td th:each="phone : ${client.phones}">
+                    <th:block th:text="${phone.number}"></th:block>
+                </td>
+            </tr>
+    </tbody>
+</table>
+
+<script src="/js/getAllClients.js"></script>
+<script src="/js/createClient.js"></script>
+</body>
+</html>
