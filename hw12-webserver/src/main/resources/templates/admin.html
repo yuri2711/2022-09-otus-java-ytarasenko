@@ -1,0 +1,42 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Клиенты</title>
+</head>
+
+<body>
+<h3>Создать нового клиента</h3>
+<form id="newClientForm" style="width: 300px;">
+    <p>
+        <label>Ваше имя</label>
+        <input type="text" id="newName" value="test" placeholder="Введите имя клиента" required autofocus>
+    </p>
+    <p>
+        <label>Login</label>
+        <input type="text" id="newLogin" value="test" placeholder="Придумайте ЛОГИН" required>
+    </p>
+    <p>
+        <label>Пароль</label>
+        <input type="password" id="newPassword" value="test" placeholder="Придумайте пароль" required>
+    </p>
+    <p>
+        <label>Адрес</label>
+        <input type="text" id="newAddress" value="text" placeholder="Введите адрес">
+    </p>
+    <p>
+        <label>Телефон</label>
+        <input type="text" id="newPhone" value="test" placeholder="Введите номер телефона">
+    </p>
+</form>
+<button onclick="createClient()">Создать</button>
+
+<h3>Список клиентов</h3>
+<button onclick="getAllClients()">Получить</button>
+<table border="1">
+    <thead id="tHead"></thead>
+    <tbody id="tBody"></tbody>
+</table>
+
+<script src="/js/getAllClients.js"></script>
+<script src="/js/createClient.js"></script>
+</body>
+</html>

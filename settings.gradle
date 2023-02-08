@@ -9,3 +9,6 @@ include 'hw-07-structuralPatterns'
 include 'hw08-io'
 include 'hw-09-JDBC'
 include 'hw10-JPQL'
+include 'hw12-webserver'
+findProject(':hw12-webserver')?.name = 'hw12-webServer'
+
