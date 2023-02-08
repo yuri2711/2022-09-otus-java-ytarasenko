@@ -9,5 +9,6 @@ include 'hw-07-structuralPatterns'
 include 'hw08-io'
 include 'hw-09-JDBC'
 include 'hw10-JPQL'
+include 'hw11-cache'
 include 'hw13-DI'
-
+include 'hw15-executors'
