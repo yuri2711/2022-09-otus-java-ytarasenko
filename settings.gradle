@@ -16,5 +16,6 @@ include 'hw14-springData'
 include 'hw15-executors'
 include 'hw16-concurrent-container'
 include 'hw16-concurrent-container:queue-demo'
-findProject(':hw16-concurrent-container:queue-demo')?.name = 'queue-demo'
+include 'hw18-webflux:client-service'
+include 'hw18-webflux:datastore-service'
 
