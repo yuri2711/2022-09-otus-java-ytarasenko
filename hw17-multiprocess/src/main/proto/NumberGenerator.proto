@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+option java_package = "ru.otus.grpc.protobuf.generated";
+option java_multiple_files = true;
+
+message NumberGrpcRequest {
+  int64 first = 1;
+  int64 last = 2;
+}
+
+message NumberGrpcResponse {
+  int64 value = 1;
+}
+
+service NumberGeneratorService {
+  rpc GetNumber(NumberGrpcRequest) returns (stream NumberGrpcResponse);
+}
